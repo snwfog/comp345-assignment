@@ -1,0 +1,3 @@
+This is the directory for COMP345 individual assignments.
+
+Assignment 1 Due date: October 14, 2011
