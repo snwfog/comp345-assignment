@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB17F29D1436205D007D7B44 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F29C1436205D007D7B44 /* main.cpp */; };
+		EB17F29F1436205D007D7B44 /* comp345_assignment_01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB17F29E1436205D007D7B44 /* comp345_assignment_01.1 */; };
+		EB8688DD1436220F00B59C44 /* MapEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB8688DC1436220F00B59C44 /* MapEditor.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB17F2961436205D007D7B44 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				EB17F29F1436205D007D7B44 /* comp345_assignment_01.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EB17F2981436205D007D7B44 /* comp345-assignment-01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "comp345-assignment-01"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB17F29C1436205D007D7B44 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB17F29E1436205D007D7B44 /* comp345_assignment_01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = comp345_assignment_01.1; sourceTree = "<group>"; };
+		EB8688DB143621F500B59C44 /* MapEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEditor.h; sourceTree = "<group>"; };
+		EB8688DC1436220F00B59C44 /* MapEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapEditor.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB17F2951436205D007D7B44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB17F28D1436205D007D7B44 = {
+			isa = PBXGroup;
+			children = (
+				EB17F29B1436205D007D7B44 /* comp345-assignment-01 */,
+				EB17F2991436205D007D7B44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB17F2991436205D007D7B44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB17F2981436205D007D7B44 /* comp345-assignment-01 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB17F29B1436205D007D7B44 /* comp345-assignment-01 */ = {
+			isa = PBXGroup;
+			children = (
+				EB17F29C1436205D007D7B44 /* main.cpp */,
+				EB17F29E1436205D007D7B44 /* comp345_assignment_01.1 */,
+				EB8688DB143621F500B59C44 /* MapEditor.h */,
+				EB8688DC1436220F00B59C44 /* MapEditor.cpp */,
+			);
+			path = "comp345-assignment-01";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB17F2971436205D007D7B44 /* comp345-assignment-01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB17F2A21436205D007D7B44 /* Build configuration list for PBXNativeTarget "comp345-assignment-01" */;
+			buildPhases = (
+				EB17F2941436205D007D7B44 /* Sources */,
+				EB17F2951436205D007D7B44 /* Frameworks */,
+				EB17F2961436205D007D7B44 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "comp345-assignment-01";
+			productName = "comp345-assignment-01";
+			productReference = EB17F2981436205D007D7B44 /* comp345-assignment-01 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB17F28F1436205D007D7B44 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EB17F2921436205D007D7B44 /* Build configuration list for PBXProject "comp345-assignment-01" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB17F28D1436205D007D7B44;
+			productRefGroup = EB17F2991436205D007D7B44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB17F2971436205D007D7B44 /* comp345-assignment-01 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB17F2941436205D007D7B44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17F29D1436205D007D7B44 /* main.cpp in Sources */,
+				EB8688DD1436220F00B59C44 /* MapEditor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EB17F2A01436205D007D7B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EB17F2A11436205D007D7B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EB17F2A31436205D007D7B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EB17F2A41436205D007D7B44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB17F2921436205D007D7B44 /* Build configuration list for PBXProject "comp345-assignment-01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17F2A01436205D007D7B44 /* Debug */,
+				EB17F2A11436205D007D7B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB17F2A21436205D007D7B44 /* Build configuration list for PBXNativeTarget "comp345-assignment-01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17F2A31436205D007D7B44 /* Debug */,
+				EB17F2A41436205D007D7B44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB17F28F1436205D007D7B44 /* Project object */;
+}

@@ -11,6 +11,16 @@
 		EB17F287143404B6007D7B44 /* ncurse_tut.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB17F286143404B6007D7B44 /* ncurse_tut.1 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EB17F2A914362070007D7B44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB17F2A51436205D007D7B44 /* comp345-assignment-01.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB17F2981436205D007D7B44;
+			remoteInfo = "comp345-assignment-01";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EB17F27E143404B6007D7B44 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -28,6 +38,7 @@
 		EB17F280143404B6007D7B44 /* ncurse-tut */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ncurse-tut"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB17F284143404B6007D7B44 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EB17F286143404B6007D7B44 /* ncurse_tut.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ncurse_tut.1; sourceTree = "<group>"; };
+		EB17F2A51436205D007D7B44 /* comp345-assignment-01.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "comp345-assignment-01.xcodeproj"; path = "../comp345-assignment-01/comp345-assignment-01.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,7 @@
 		EB17F275143404B6007D7B44 = {
 			isa = PBXGroup;
 			children = (
+				EB17F2A51436205D007D7B44 /* comp345-assignment-01.xcodeproj */,
 				EB17F283143404B6007D7B44 /* ncurse-tut */,
 				EB17F281143404B6007D7B44 /* Products */,
 			);
@@ -64,6 +76,14 @@
 				EB17F286143404B6007D7B44 /* ncurse_tut.1 */,
 			);
 			path = "ncurse-tut";
+			sourceTree = "<group>";
+		};
+		EB17F2A61436205D007D7B44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB17F2AA14362070007D7B44 /* comp345-assignment-01 */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,12 +121,28 @@
 			mainGroup = EB17F275143404B6007D7B44;
 			productRefGroup = EB17F281143404B6007D7B44 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EB17F2A61436205D007D7B44 /* Products */;
+					ProjectRef = EB17F2A51436205D007D7B44 /* comp345-assignment-01.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EB17F27F143404B6007D7B44 /* ncurse-tut */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EB17F2AA14362070007D7B44 /* comp345-assignment-01 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "comp345-assignment-01";
+			remoteRef = EB17F2A914362070007D7B44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB17F27C143404B6007D7B44 /* Sources */ = {
@@ -200,6 +236,7 @@
 				EB17F28C143404B6007D7B44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
