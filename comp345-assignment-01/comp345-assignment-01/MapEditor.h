@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include <string>
 #include <ncurses.h>
 
 #ifndef comp345_assignment_01_MapEditor_h
@@ -21,7 +20,7 @@ class MapEditor {
 private:
     
 public:
-    MapEditor::MapEditor();
+    MapEditor();
 };
 
 #endif

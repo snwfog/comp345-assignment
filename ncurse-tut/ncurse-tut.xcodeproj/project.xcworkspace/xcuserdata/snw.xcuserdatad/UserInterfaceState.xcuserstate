@@ -512,7 +512,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>339095509.60463297</real>
+		<real>339201627.89344698</real>
 		<string>{0, 291}</string>
 		<string>{258, 0}</string>
 		<dict>
@@ -560,9 +560,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339100530.70441598</real>
-		<string>{0, 396}</string>
-		<string>{384, 0}</string>
+		<real>339202179.11656803</real>
+		<string>{0, 385}</string>
+		<string>{307, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -608,9 +608,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339108887.25707698</real>
-		<string>{1012, 1176}</string>
-		<string>{1550, 0}</string>
+		<real>339214359.83227003</real>
+		<string>{3283, 993}</string>
+		<string>{3677, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -703,7 +703,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339095661.794882</real>
+		<real>339201630.25113797</real>
 		<string>{0, 171}</string>
 		<dict>
 			<key>$class</key>
@@ -2819,10 +2819,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339108887.26029402</real>
-		<string>{1012, 1176}</string>
-		<string>{1550, 0}</string>
-		<string>main (int argc, const char * argv[])</string>
+		<real>339214359.834059</real>
+		<string>{3283, 993}</string>
+		<string>{3677, 0}</string>
+		<string>updateCursorLocation(int y, int x)</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
