@@ -4,32 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "ncurse-tut/main.cpp"
-         timestampString = "339212089.187209"
+         isPathRelative = "0"
+         filePath = "/Users/snw/Dropbox/prog/cpp/comp345-assignment/comp345-assignment-01/comp345-assignment-01/MapEditor.h"
+         timestampString = "340590636.415363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "225"
-         endingLineNumber = "225"
-         landmarkName = "updateCursorLocation(int y, int x)"
-         landmarkType = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "ncurse-tut/main.cpp"
-         timestampString = "339212260.166812"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "220"
-         endingLineNumber = "220"
-         landmarkName = "updateCursorLocation(int y, int x)"
-         landmarkType = "7">
+         startingLineNumber = "37"
+         endingLineNumber = "37">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

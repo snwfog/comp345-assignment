@@ -11,7 +11,7 @@
 #include "ncurses.h"
 using std::string;
 
-enum GameObjectType { EMPTY = 0, WALL = '#', MONSTER = 'x', PLAYER = 'A', CHEST = 'o' };
+enum GameObjectType { EMPTY = 32, WALL = '#', MONSTER = 'x', PLAYER = 'A', CHEST = 'o' };
 struct Cursor {
     int x;
     int y;
@@ -38,9 +38,13 @@ void insertObjectAtCurrentPosition(int c);
 void clearWindow(WINDOW* window, int attributes);
 void clearWindow(WINDOW* window);
 GameObject getGameObjectAtCurrentPosition();
+void autoWalls();
+int integerValueOf(char a[]);
+void insertObjectAtPosition(int y, int x, GameObjectType type);
 
 WINDOW* wlegend;
 WINDOW* wdialog;
+GameObject player(0, 0, PLAYER);
 
 Cursor::Cursor(int y, int x) : x(x), y(y) { }
 Cursor::Cursor() : x(0), y(0) { }
@@ -90,11 +94,11 @@ WINDOW* createLegend() {
     mvwprintw(wlegend, 5, 1, " o (c)hest");
     mvwprintw(wlegend, 6, 1, " x (m)onster");  
     
-    mvwprintw(wlegend, 8, 1, "EXTRA OPTIONS");
-    mvwprintw(wlegend, 9, 1, " (a)uto walls");
-    mvwprintw(wlegend, 10, 1, " (d)oor");
+    mvwprintw(wlegend, 8, 1, " (a)uto walls");
+    mvwprintw(wlegend, 9, 1, " (d)oor");
     
-    mvwprintw(wlegend, 12, 1, " (r)emove");
+    mvwprintw(wlegend, 11, 1, " (r)emove");
+    
     mvwprintw(wlegend, 13, 1, " (s)ave map");
     mvwprintw(wlegend, 14, 1, " (q)uit");
     wrefresh(wlegend);
@@ -155,6 +159,9 @@ void enterEditMode() {
             case 'r':
                 insertObjectAtCurrentPosition(c);
                 break;
+            case 'a':
+                autoWalls();
+                break;
             default:
                 mvwprintw(wdialog, 0, 0, "Error: Unrecognized option. ");
                 wrefresh(wdialog);
@@ -168,7 +175,6 @@ void saveMap() {
     clearWindow(wdialog);
     
     wattron(wdialog, A_STANDOUT);
-    nodelay(stdscr, FALSE);
     mvwprintw(wdialog, 0, 0, "Save before exit? <y/n>");
     wrefresh(wdialog);
     if (getch() == 'y') {
@@ -179,7 +185,7 @@ void saveMap() {
     }
     wattroff(wdialog, A_STANDOUT);
     wrefresh(wdialog);
-    usleep(1000000);
+    usleep(700000);
 }
 
 void moveCursor(int c) {
@@ -208,6 +214,14 @@ void insertObjectAtCurrentPosition(int c) {
             type = WALL;
             break;
         case 'p':
+            // erase the old player position from the databse
+            db[player.y][player.x] = GameObject(player.y, player.x, EMPTY);
+            // erase the old player position from stdscr
+            mvprintw(player.y, player.x, "%c", db[player.y][player.x].object);
+            // update the player current position;
+            player.y = cursor.y;
+            player.x = cursor.x;
+
             type = PLAYER;
             break;
         case 'm':
@@ -222,10 +236,21 @@ void insertObjectAtCurrentPosition(int c) {
             // type = EMPTY;
             break;
     }
+    
+    // update the database at current cursor position with the currently inserted game object
     db[cursor.y][cursor.x] = GameObject(cursor.y, cursor.x, type);
-    mvwprintw(stdscr, cursor.y, cursor.x, "%c", db[cursor.y][cursor.x].object);
+    // update the stdscr at the current cursor position with the 
+    // currently inserted game object character representation
+    mvprintw(cursor.y, cursor.x, "%c", db[cursor.y][cursor.x].object);
+    refresh();
+}
+
+void insertObjectAtPosition(int y, int x, GameObjectType type) {
+    db[y][x] = GameObject(y, x, type);
+    mvwprintw(stdscr, y, x, "%c", db[y][x].object);
     wrefresh(wdialog);
 }
+
 
 void clearWindow(WINDOW* window, int attributes) {
     wattroff(wdialog, A_ATTRIBUTES);
@@ -250,6 +275,60 @@ void clearWindow(WINDOW* window) {
     wrefresh(window);
 }
 
-bool cursorOutOfBound() {
-    return false;
+void autoWalls() {
+    int nHeight;
+    do {
+        clearWindow(wdialog);
+        mvwprintw(wdialog, 0, 0, "Height? (0-9) (Hint: Enter 0 for the largest height.)");
+        wrefresh(wdialog);  
+    } while ((nHeight = getch() - '0') < 0 || nHeight > 9);
+    
+    int nWidth;
+    
+    do {
+        clearWindow(wdialog);
+        mvwprintw(wdialog, 0, 0, "Width? (0-9) (Hint: Enter 0 for the largest width.)");
+        wrefresh(wdialog);
+    } while ((nWidth = getch() - '0') < 0 || nWidth > 9);
+    
+    if (nHeight == 0 && nWidth == 0) {
+        for (int i = cursor.y; i < getmaxy(stdscr)-1; i++) {
+            insertObjectAtPosition(i, cursor.x, WALL);
+            insertObjectAtPosition(i, getmaxx(stdscr)-17, WALL);
+        }
+        for (int i = cursor.x; i < getmaxx(stdscr)-17; i++) {
+            insertObjectAtPosition(cursor.y, i, WALL);
+            insertObjectAtPosition(getmaxy(stdscr)-2, i, WALL);
+        }
+    } else if (nHeight == 0) {
+        for (int i = cursor.y; i < getmaxy(stdscr)-1; i++) {
+            insertObjectAtPosition(i, cursor.x, WALL);
+            insertObjectAtPosition(i, getmaxx(stdscr)-17, WALL);
+        }
+        for (int i = cursor.x; i < cursor.x + nWidth; i++) {
+            insertObjectAtPosition(cursor.y, i, WALL);
+            insertObjectAtPosition(cursor.y + nHeight-1, i, WALL);
+        }
+    } else if (nWidth == 0) {
+        for (int i = cursor.y; i < cursor.y + nHeight; i++) {
+            insertObjectAtPosition(i, cursor.x, WALL);
+            insertObjectAtPosition(i, cursor.x + nWidth-1, WALL);
+            
+        }
+        for (int i = cursor.x; i < getmaxx(stdscr)-17; i++) {
+            insertObjectAtPosition(cursor.y, i, WALL);
+            insertObjectAtPosition(getmaxy(stdscr)-1, i, WALL);
+        }
+    } else {
+        for (int i = cursor.y; i < cursor.y + nHeight; i++) {
+            insertObjectAtPosition(i, cursor.x, WALL);
+            insertObjectAtPosition(i, cursor.x + nWidth-1, WALL);
+            
+        }
+        for (int i = cursor.x; i < cursor.x + nWidth; i++) {
+            insertObjectAtPosition(cursor.y, i, WALL);
+            insertObjectAtPosition(cursor.y + nHeight-1, i, WALL);
+        }
+    }
+    refresh();
 }
