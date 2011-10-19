@@ -15,11 +15,12 @@
 #include "MapEditor.h"
 
 namespace COMP345 {
-//    class Editor {
-//    public:
-//        Editor();
-//    private:
-//        static std::vector<GameMap> mapdb;
-//    };
+    class Editor {
+    public:
+        Editor();
+        friend class MapEditor;
+    private:
+        static std::vector<GameMap> mapdb;
+    };
 }
 #endif

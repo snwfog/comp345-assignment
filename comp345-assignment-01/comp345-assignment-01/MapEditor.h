@@ -48,7 +48,7 @@ namespace COMP345 {
         void refreshstdscrFromGameObjectDatabase();
     public:
         MapEditor();
-        // MapEditor(GameMap map);
+        MapEditor(GameMap map);
         //~MapEditor();
     };
 }

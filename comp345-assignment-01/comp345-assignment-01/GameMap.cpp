@@ -9,8 +9,6 @@
 #include "GameMap.h"
 
 namespace COMP345 {
-    
-    
     // constructor for game map
     GameMap::GameMap() {
         // initialize everything to empty space

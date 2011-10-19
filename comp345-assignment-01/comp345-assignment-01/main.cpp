@@ -6,11 +6,11 @@
 
 
 #include <iostream>
-#include "MapEditor.h"
+#include "Editor.h"
 
 int main (int argc, const char * argv[])
 {
-    COMP345::MapEditor neweditor;
+    COMP345::Editor neweditor;
     return 0;
 }
 

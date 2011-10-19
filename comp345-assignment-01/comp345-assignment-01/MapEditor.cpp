@@ -64,47 +64,47 @@ namespace COMP345 {
         endwin();
     }
     
-//    MapEditor::MapEditor(GameMap map) {
-//        // initializing a few ncurses handy functions
-//        
-//        // initialize the default screen, 50x80 
-//        initscr();
-//        
-//        // turn off echoing input
-//        noecho();
-//        
-//        // turn off terminal cursor
-//        curs_set(0);
-//        
-//        // disable the terminal line buffer
-//        // so the input character is immediately avaiable on input
-//        raw();
-//        
-//        // enable f-# function keys and the arrow keys
-//        keypad(stdscr, TRUE);
-//        
-//        // gives a refresh to the stdscr
-//        refresh();
-//        
-//        // create and display the legend and dialog window
-//        pwLegend = createLegendWindow();
-//        pwDialog = createDialogWindow();
-//        
-//        // fill the gameObjectDatabase
-//        for (int j = 0; j < STD_Y; j++) {
-//            for (int i = 0; i < STD_X; i++)
-//                gameObjectDatabase[j][i] = map.gameObjectDatabase[j][i];
-//        }
-//        
-//        // display the initial location of the constructor
-//        moveCursorPositionTo((STD_Y)/2, (STD_X)/2);
-//        
-//        // go into editor mode
-//        enterEditMode();
-//
-//        // clean the windows
-//        endwin();        
-//    }
+    MapEditor::MapEditor(GameMap map) {
+        // initializing a few ncurses handy functions
+        
+        // initialize the default screen, 50x80 
+        initscr();
+        
+        // turn off echoing input
+        noecho();
+        
+        // turn off terminal cursor
+        curs_set(0);
+        
+        // disable the terminal line buffer
+        // so the input character is immediately avaiable on input
+        raw();
+        
+        // enable f-# function keys and the arrow keys
+        keypad(stdscr, TRUE);
+        
+        // gives a refresh to the stdscr
+        refresh();
+        
+        // create and display the legend and dialog window
+        pwLegend = createLegendWindow();
+        pwDialog = createDialogWindow();
+        
+        // fill the gameObjectDatabase
+        for (int j = 0; j < STD_Y; j++) {
+            for (int i = 0; i < STD_X; i++)
+                gameObjectDatabase[j][i] = map.gameObjectDatabase[j][i];
+        }
+        
+        // display the initial location of the constructor
+        moveCursorPositionTo((STD_Y)/2, (STD_X)/2);
+        
+        // go into editor mode
+        enterEditMode();
+
+        // clean the windows
+        endwin();        
+    }
     
     void MapEditor::enterEditMode() {
         int c;
@@ -402,6 +402,7 @@ namespace COMP345 {
         mvwprintw(pwDialog, 0, 0, "save before exit? <y/n>");
         wrefresh(pwDialog);
         if (getch() == 'y') {
+            
             mvwprintw(pwDialog, 0, 0, "map saved to the current map collection!");
         } else {
             wclear(pwDialog, A_STANDOUT);  
