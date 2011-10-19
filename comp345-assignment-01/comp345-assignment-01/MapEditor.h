@@ -9,25 +9,11 @@
 
 #include <iostream>
 #include <ncurses.h>
-// #include "GameMap.h"
+
+#include "GameMap.h"
 
 namespace COMP345 {
-    // maximum width of stdscr
-    const int STD_X = 80-16;
-    // maximum height of stdscr
-    const int STD_Y = 25-1;
-    
-    // character representation of the game objects
-    enum GameObjectType { EMPTY = 32, WALL = '#', MONSTER = 'x', PLAYER = 'A', CHEST = 'o' };
-    
-    // structure to represent the game object
-    struct GameObject {
-        int y, x;
-        GameObjectType objectType;
-        GameObject(int, int, GameObjectType);
-        GameObject();
-    };
-    
+        
     // structure to represent the cursor
     struct Cursor {
         int y, x;

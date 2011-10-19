@@ -4,16 +4,46 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/snw/Dropbox/prog/cpp/comp345-assignment/comp345-assignment-01/comp345-assignment-01/MapEditor.cpp"
+         timestampString = "340606537.838882"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "MapEditor::MapEditor()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/snw/Dropbox/prog/cpp/comp345-assignment/comp345-assignment-01/comp345-assignment-01/MapEditor.h"
-         timestampString = "340590636.415363"
+         timestampString = "340653758.494991"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37">
+         startingLineNumber = "52"
+         endingLineNumber = "52"
+         landmarkName = "class MapEditor"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/snw/Dropbox/prog/cpp/comp345-assignment/comp345-assignment-01/comp345-assignment-01/MapEditor.cpp"
+         timestampString = "340732977.369635"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
+         landmarkName = "MapEditor::enterEditMode()"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

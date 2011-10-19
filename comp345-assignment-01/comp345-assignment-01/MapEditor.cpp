@@ -9,10 +9,7 @@
 namespace COMP345 {
     Cursor::Cursor(int y, int x) : y(y), x(x) { }
     Cursor::Cursor() : y((STD_Y)/2), x((STD_X)/2) { }
-    
-    GameObject::GameObject(int y, int x, GameObjectType type) : y(y), x(x), objectType(type) { }
-    GameObject::GameObject() : y(0), x(0), objectType(EMPTY) { }
-        
+   
     // constructor for map editor
     MapEditor::MapEditor() {
         // initializing a few ncurses handy functions
@@ -46,10 +43,10 @@ namespace COMP345 {
         // otherwise you could just do GameObject gameObjectDatabase[][] = { GameObject() };
         // see stackoverflow: http://stackoverflow.com/questions/3586774/fill-multidimensional-array-elements-with-0s
         // std::fill_n(gameObjectDatabase, STD_X*STD_Y, GameObject());
-        for (int j = 0; j < STD_Y; j++) {
-            for (int i = 0; i < STD_X; i++)
-                gameObjectDatabase[j][i] = GameObject();
-        }
+        //for (int j = 0; j < STD_Y; j++) {
+        //    for (int i = 0; i < STD_X; i++)
+        //        gameObjectDatabase[j][i] = GameObject();
+        //}
         
         
         // display the initial location of the constructor

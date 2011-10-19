@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB13C871144F5BC000CC0CC6 /* GameObjectType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB13C870144F5BC000CC0CC6 /* GameObjectType.cpp */; };
 		EB17F29D1436205D007D7B44 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F29C1436205D007D7B44 /* main.cpp */; };
 		EB17F29F1436205D007D7B44 /* comp345_assignment_01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB17F29E1436205D007D7B44 /* comp345_assignment_01.1 */; };
 		EB1D757D144F338A00061C2E /* Editor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB1D757C144F338A00061C2E /* Editor.cpp */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB13C870144F5BC000CC0CC6 /* GameObjectType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObjectType.cpp; sourceTree = "<group>"; };
+		EB13C873144F5BCB00CC0CC6 /* GameObjectType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjectType.h; sourceTree = "<group>"; };
 		EB17F2981436205D007D7B44 /* comp345-assignment-01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "comp345-assignment-01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB17F29C1436205D007D7B44 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EB17F29E1436205D007D7B44 /* comp345_assignment_01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = comp345_assignment_01.1; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				EB1D757A144F338100061C2E /* Editor.h */,
 				EB1D757C144F338A00061C2E /* Editor.cpp */,
 				EBE0DDE6144F2C5300EF8CF5 /* GameMap.h */,
+				EB13C870144F5BC000CC0CC6 /* GameObjectType.cpp */,
+				EB13C873144F5BCB00CC0CC6 /* GameObjectType.h */,
 				EBE0DDE8144F2C6100EF8CF5 /* GameMap.cpp */,
 				EB8688DC1436220F00B59C44 /* MapEditor.cpp */,
 			);
@@ -132,6 +137,7 @@
 				EB8688DD1436220F00B59C44 /* MapEditor.cpp in Sources */,
 				EBE0DDE9144F2C6100EF8CF5 /* GameMap.cpp in Sources */,
 				EB1D757D144F338A00061C2E /* Editor.cpp in Sources */,
+				EB13C871144F5BC000CC0CC6 /* GameObjectType.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

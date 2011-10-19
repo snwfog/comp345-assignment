@@ -8,8 +8,14 @@
 
 #ifndef GAMEMAP_H
 #define GAMEMAP_H
+#include "GameObjectType.h"
 
-namespace COMP345 {
+namespace COMP345 {    
+    // maximum width of stdscr
+    const int STD_X = 80-16;
+    // maximum height of stdscr
+    const int STD_Y = 25-1;
+    
     class GameMap {
     private:
         GameObject gameObjectDatabase[STD_Y][STD_X];
@@ -20,5 +26,4 @@ namespace COMP345 {
     };
 
 }
-
 #endif
